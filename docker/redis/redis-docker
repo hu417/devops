@@ -1,0 +1,5 @@
+
+docker run -d  -p 6379:6379 \
+-v ~/i/apps/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf \
+-v ~/i/apps/redis/data:/data --name myredis \
+redis redis-server /usr/local/etc/redis/redis.conf
