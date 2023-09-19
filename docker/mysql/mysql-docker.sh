@@ -26,9 +26,9 @@ docker run \
 -d \
 -p 3306:3306 \
 --restart unless-stopped \
--v /data/mysql/log:/var/log/mysql \
--v /data/mysql/data:/var/lib/mysql \
--v /data/mysql/conf:/etc/mysql \
+-v ./mysql/log:/var/log/mysql \
+-v ./mysql/data:/var/lib/mysql \
+-v ./mysql/conf/my.cnf:/etc/my.cnf \
 -v /etc/localtime:/etc/localtime \
 -e LANG="C.UTF-8" \
 -e TZ=Asia/Shanghai \
@@ -37,9 +37,9 @@ docker run \
 
 
 1、进入镜像中的mysql（ti 后面的字符串是mysql镜像ID）
-docker exec -ti 2cbb0f246353 /bin/bash
+docker exec -ti mysql /bin/bash
 2、登录mysql
-mysql -u root -p
+mysql -uroot -p123456
 3、修改root 可以通过任何客户端连接
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 4、刷新命令生效
@@ -49,3 +49,11 @@ flush privileges;
 create user 'sre'@'%' identified by '111111';
 grant all on *.* to 'sre'@'%' with grant option;
 flush privileges;
+
+创建数据库
+Create Database If Not Exists devops Character Set utf8mb4;
+创建表
+Create Table If Not Exists `test`(
+`ID` Bigint(8) unsigned Primary key Auto_Increment,
+`Name` text
+)Engine InnoDB DEFAULT CHARSET=utf8mb4;
