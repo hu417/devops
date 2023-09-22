@@ -2,7 +2,7 @@ mkdir -p es/{data,plugins}
 chmod -R 777 es/*
 
 docker run -d --restart=always --name es \
---privileged -p 9200:92 -p 9300:9300 \
+--privileged -p 9200:9200 -p 9300:9300 \
 -e "ES_JAVA_OPTS=-Xms512m -Xmx512m" \
 -e "discovery.type=single-node" \
 -e "xpack.security.enabled=false" \
