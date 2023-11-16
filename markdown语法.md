@@ -316,7 +316,7 @@ Hello world
 
 
 ---
-> [!info]提示
+> [!debug] 提示
 
 ```bash
 note
