@@ -61,9 +61,9 @@
 
 [这是一段正文内容]
 
->引用他人的论点论据，用来佐证本文的背景及意义。
+> 引用他人的论点论据，用来佐证本文的背景及意义。
 >
->——引文出处，适当增加尾注[^1]
+> ——引文出处，适当增加尾注[^1]
 
 [这是一段正文内容]
 
@@ -289,7 +289,7 @@ Hello world
 
 网页截图：
 
-![](../images/4-1.png)
+![demo|500x500](../images/4-1.png)
 
 <center>图4-1：访问效果图</center>
 
@@ -313,7 +313,25 @@ Hello world
 | 登出         | <font color="green">√</font> | <font color="red">×</font>   | 无   |
 | 增加学员信息 | <font color="red">×</font>   | <font color="red">×</font>   | 无   |
 
+---
 
+> [!info]提示
+
+```bash
+note
+abstract, summary,tldr
+info,todo
+tip,hint,important
+success,check,done
+question,help,faq
+warning,caution,attention
+failure,fail,missing
+danger,error
+bug
+example
+quote,cite
+
+```
 
 正文某处[^1]
 
