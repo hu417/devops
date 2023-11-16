@@ -313,8 +313,9 @@ Hello world
 | 登出         | <font color="green">√</font> | <font color="red">×</font>   | 无   |
 | 增加学员信息 | <font color="red">×</font>   | <font color="red">×</font>   | 无   |
 
----
 
+
+---
 > [!info]提示
 
 ```bash
@@ -330,7 +331,6 @@ danger,error
 bug
 example
 quote,cite
-
 ```
 
 正文某处[^1]
